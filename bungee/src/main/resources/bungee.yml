@@ -1,0 +1,5 @@
+name: bungee
+version: '1.0-STABLE'
+main: me.pincer.bungee.Bungee
+author: PincerPrithu
+description: PincerSuiteBungee

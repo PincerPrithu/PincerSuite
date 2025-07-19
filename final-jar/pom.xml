@@ -1,0 +1,50 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>me.pincer.lib</groupId>
+    <artifactId>PincerSuiteLib</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>me.pincer.lib</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>me.pincer</groupId>
+            <artifactId>bungee</artifactId>
+            <version>1.0-STABLE</version>
+        </dependency>
+        <dependency>
+            <groupId>me.pincer</groupId>
+            <artifactId>paper</artifactId>
+            <version>1.0-STABLE</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Shade Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>shade</goal></goals>
+                        <configuration>
+                            <minimizeJar>true</minimizeJar> <!-- Optional -->
+                            <relocations>
+                                <!-- Optional: Relocate to avoid conflicts -->
+                            </relocations>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
